@@ -96,6 +96,13 @@ describe('Modcheck', function () {
         });
       });
 
+      describe('Exception 8', function () {
+        it('should pass for 06774744 / 08-60-90', function () {
+          let modcheck = new Modcheck('06774744', '08-60-90');
+          assert.isTrue(modcheck.check());
+        });
+      });
+
     });
   });
 

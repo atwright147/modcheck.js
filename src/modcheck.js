@@ -29,6 +29,9 @@ export default class Modcheck {
 
     checks.forEach(function (check) {
       this.currentCheck = check;
+      if (check.exception == 8) {
+        this.sortCode = '090126';
+      }
 
       this.weight = Object.keys(check.weight).reduce(function (prev, cur) {
         return prev + check.weight[cur].toString();
